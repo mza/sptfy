@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<%= stylesheet_link_tag "screen" %>
+	<title>sptfy - link shortening for Spotify</title>
+</head>
+
+<body>
+	
+	<div id='container'>
+		<div id='preamble'>
+			<div id='artwork'>
+				<%= image_tag "albums/dark-side.gif", :size => "140x140" %>
+			</div>
+			<div id='header'>
+				<div id='title'>
+					<h1><strong>sptfy</strong>.com</h1>
+				</div>
+				<div id='tag'>
+					<h2>Links are the new MP3s: we make tiny cover versions</h2>
+				</div>
+			</div>
+			<br clear='all'>
+		</div>
+		
+		<div id='steps'>
+			<div class='step'>
+				<div class='number'>
+					<strong>A</strong>
+				</div>
+				<div class='first item'>
+					Your <%= link_to 'Spotify', "http://www.spotify.com" %> link:<br />
+					<%= text_field :link, :url, { :size => "50"} %>
+				</div>
+				<br clear='all'>
+			</div>
+			
+			<div class='step'>
+				<div class='number'>
+					<strong>B</strong>
+				</div>
+				<div class='item'>
+					http://sptfy.com/<%= text_field :link, :name, { :size => "10"} %>
+					<p>Optionally, customize your new link</p>
+				</div>				
+				<br clear='all'>
+			</div>
+
+			<div class='final step'>
+				<div class='number'>
+					&nbsp;
+				</div>
+				<div class='item'>
+					<%= link_to 'Shorten this link &rarr;', "javascript:shorten();", { :class => "shorten" }%> or <%= link_to 'are you feeling lucky?', :controller => "links", :action => "random" %>
+				</div>				
+				<br clear='all'>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+</body>
+</html>
+

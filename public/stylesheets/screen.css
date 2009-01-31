@@ -1,0 +1,125 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	border-top: 6px solid #45a000;
+}
+
+h1, h2, h2 {
+	font-family: georgia, times, serif;
+	font-style: italic;
+	font-weight: normal;
+	margin: 0px;
+	padding: 0px;
+}
+
+div#container {
+	width: 800px;
+	margin: 0px auto;
+	padding-top: 20px;
+}
+
+div#header {
+	float: left;
+}
+
+div#header h1 {
+	color: #6ace00;
+	font-size: 42px;
+	margin-bottom: 5px;
+}
+
+div#title {
+	margin-top: 8px;
+	border-bottom: 1px solid #6ace00;
+	margin-bottom: 12px;
+	padding-bottom: 12px;
+}
+
+div#header h2 {
+	color: #2F5413;
+	font-size: 22px;
+}
+
+div#header h1 strong {
+	font-weight: normal;
+	color: #2F5413;
+	font-size: 52px;
+}
+
+div#artwork img {
+	border: 4px solid #aaa;
+}
+
+div#artwork {
+	float: left;
+	width: 140px;
+	margin-right: 26px;
+}
+
+div#steps {
+}
+
+div.step {
+	margin-bottom: 10px;
+}
+
+div.number {
+	margin-top: 30px;
+	font-family: georgia, times, serif;
+	font-style: italic;
+	width: 150px;
+	text-align: right;
+	float: left;
+}
+
+div.number strong {
+	font-weight: normal;
+	background: #589922;
+	font-size: 20px;
+	padding: 8px;
+	color: #fff;
+	border: 4px double #fff;
+}
+
+div.item {
+	margin-top: 11px;
+	float: left;
+	font-family: helvetica, verdana, arial, sans-serif;
+	margin-left: 20px;
+}
+
+div.first {
+	margin-top: 20px;	
+}
+
+div.final {
+	margin-top: 50px;
+}
+
+div.item p {
+	margin: 0px;
+	padding: 3px 0px 0px 0px;
+	font-size: 11px;
+	color: #666;
+}
+
+a {
+	text-decoration: none;
+	color: #5A9C23;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+input {
+	margin-top: 7px;
+	font-size: 16px;
+}
+
+a.shorten {
+	background: #36521B;
+	color: #fff;
+	border: 4px double #fff;
+	padding: 10px;
+}
