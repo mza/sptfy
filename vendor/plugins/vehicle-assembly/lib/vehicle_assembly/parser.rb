@@ -2,8 +2,12 @@ module VehicleAssembly
   class Parser
     
     def self.parse(filename)
-      template = ERB.new File.read(filename)
-      template.result(binding)
+      if File.exists? filename
+        template = ERB.new File.read(filename)
+        template.result(binding)
+      else
+        puts "Can't parse '#{filename}'. File does not exist."
+      end
     end
 
     def self.prepare(filename, options = {})

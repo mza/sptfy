@@ -1,4 +1,7 @@
+NameVirtualHost *:80
+
 <VirtualHost *:80>
-  ServerName <%= instance %>
+  ServerName <%= url %>
+  ServerAlias <%= url %> *.<%= url %>
   DocumentRoot /var/www/<%= application %>
 </VirtualHost>

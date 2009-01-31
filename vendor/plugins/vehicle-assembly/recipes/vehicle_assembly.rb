@@ -1,3 +1,6 @@
+require "#{File.dirname(__FILE__)}/../lib/vehicle_assembly"
+load "config/deploy"
+
 before "bootstrap:cold", "bootstrap:update_cache"
 after "deploy", "webapp:set_ownership"
 
@@ -104,8 +107,11 @@ namespace :webapp do
 
   desc "Configures Apache and Passenger for a new web app"
   task :init do
-    template = ERB.new File.read("lib/deploy/templates/apache-config.erb")
+    
+    prefix = "#{File.dirname(__FILE__)}"    
+    template = ERB.new File.read("#{prefix}/../lib/deploy/templates/apache-config.erb")
     prepared = template.result(binding)
+    
     put prepared, "/etc/apache2/sites-available/#{application}"
     run "ln -s /etc/apache2/sites-available/#{application} /etc/apache2/sites-enabled/000-#{application}"
     symlink
