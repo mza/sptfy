@@ -5,11 +5,12 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<%= stylesheet_link_tag "screen" %>
+	<%= javascript_include_tag :defaults %>
 	<title>sptfy - link shortening for Spotify</title>
 </head>
 
 <body>
-	
+	<% form_for(:link, @link, { :url => { :controller => :links, :action => :create } }, {}, { :id => "link_form"} ) do |f|%>
 	<div id='container'>
 		<div id='preamble'>
 			<div id='artwork'>
@@ -33,7 +34,7 @@
 				</div>
 				<div class='first item'>
 					Your <%= link_to 'Spotify', "http://www.spotify.com" %> link:<br />
-					<%= text_field :link, :url, { :size => "50"} %>
+					<%= f.text_field :url, { :size => "50"} %>
 				</div>
 				<br clear='all'>
 			</div>
@@ -43,7 +44,7 @@
 					<strong>B</strong>
 				</div>
 				<div class='item'>
-					http://sptfy.com/<%= text_field :link, :name, { :size => "10"} %>
+					http://sptfy.com/<%= f.text_field :name, { :size => "10"} %>
 					<p>Optionally, customize your new link</p>
 				</div>				
 				<br clear='all'>
@@ -62,7 +63,7 @@
 		</div>
 		
 	</div>
-	
+	<% end %>
 </body>
 </html>
 
