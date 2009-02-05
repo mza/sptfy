@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<% form_for(:link, @link, { :url => { :controller => :links, :action => :create } }, {}, { :id => "link_form"} ) do |f|%>
+	<% form_for(:link, :url => { :controller => :links, :action => :create }, :html => { :id => "link_form" } ) do |f|%>
 	<div id='container'>
 		<div id='preamble'>
 			<div id='artwork'>
